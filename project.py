@@ -1,6 +1,7 @@
 from random import *
 
 def pass_lang(x):
+    """Function that choose the language of password"""
     if x == "rus":
         chars = ["А", "а", "Б", "б", "В", "в", "Г", "г", "Д", "д", "Е", "е", "Ё", "ё", "Ж", "ж", "З", "з", "И", "и",
                  "Й", "й", "К", "к", "Л", "л", "М", "м", "Н", "н", "О", "о", "П", "п", "Р", "р", "С", "с", "Т", "т",
@@ -18,6 +19,7 @@ def pass_lang(x):
             signs.append(password)
 
 def int_pass(x):
+    """Function that adds numbers"""
     if x == "yes":
         n = int(input("How many numbers do you want to add?"))
         chars = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
@@ -26,6 +28,7 @@ def int_pass(x):
             signs.append(password)
 
 def special_pass(y):
+    """Function that adds spesial signs"""
     if y == "yes":
         n = int(input("How many signs do you want to add?"))
         chars = ["+", "-", "=", "$", "%", "!", "/", "#", "*", "?"]
@@ -34,6 +37,7 @@ def special_pass(y):
             signs.append(password)
 
 def main():
+    """Main Function of creation password"""
     lang = pass_lang(input("Enter language of password(rus/eng):").lower())
     inter = int_pass(str(input("Do you want to add numbers into your password(yes/no):")).lower())
     special = special_pass(str(input("Do you want to add special signs into your password(yes/no):")).lower())
